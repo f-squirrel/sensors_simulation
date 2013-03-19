@@ -15,7 +15,7 @@ void sensor::start(unsigned& message_undelivered,  std::atomic<bool>& go, const 
 
 	message_list_.push(message_to_send);
 	
-	// we want ro start sending messages simultaneously
+	// we want to start sending messages simultaneously
 	while (!go) {
 		std::this_thread::yield();
 	}
