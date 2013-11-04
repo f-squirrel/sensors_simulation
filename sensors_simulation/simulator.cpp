@@ -94,7 +94,7 @@ bool simulator::is_network_ready() {
 
 bool simulator::is_network_connected() {
 	std::vector<network::vertices_size_type> component(num_vertices(g));
-    int num = connected_components(g, &component[0]);
+    network::vertices_size_type num = connected_components(g, &component[0]);
    	return (num <= 1);
 }
 

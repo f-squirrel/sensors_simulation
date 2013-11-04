@@ -1,6 +1,11 @@
 #ifndef UTILS_H
 #define UTILS_H
 
+
+#ifdef __APPLE__
+#include <stdlib.h>
+#endif
+
 namespace utils {
 
 	size_t	generate_random_number(unsigned min, unsigned max);

@@ -1,7 +1,9 @@
 #include "simulator.h"
 #include "utils.h"
 
+
 int main() {
+	
 	try {
 
 		std::cout	<< "enter input data:" << std::endl
@@ -13,6 +15,7 @@ int main() {
 		std::cout << std::endl;
 		if(!utils::check_input_data(sensor_num_, edges_per_sensor, seconds)) {
 			utils::press_any_key();
+
 			return EXIT_FAILURE;
 		}
 	
