@@ -1,8 +1,9 @@
 #ifndef WAITFREE_QUEUE_H
 #define WAITFREE_QUEUE_H
 
-#include <memory>
 #include <atomic>
+#include <memory>
+
 
 template<typename T>
 class waitfree_queue {

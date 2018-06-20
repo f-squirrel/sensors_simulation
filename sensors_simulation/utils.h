@@ -3,6 +3,7 @@
 
 #include <cstdlib>
 
+
 namespace utils {
 
 	size_t	generate_random_number(unsigned min, unsigned max);

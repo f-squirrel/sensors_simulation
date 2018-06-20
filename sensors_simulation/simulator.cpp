@@ -1,14 +1,17 @@
 #include "simulator.h"
 #include "utils.h"
-#include <iostream>
-#include <random>
-#include <thread>
+
 #include <boost/graph/connected_components.hpp>
 #include <boost/graph/random.hpp>
 
+#include <iostream>
+#include <random>
+#include <thread>
+
+
 using namespace boost;
 
-simulator::simulator(unsigned int sensor_num, unsigned int edges_per_sensor, unsigned int seconds ) : 
+simulator::simulator(unsigned int sensor_num, unsigned int edges_per_sensor, unsigned int seconds ) :
 		g(sensor_num), sensor_num_(sensor_num), edges_per_sensor_(edges_per_sensor), seconds_(seconds) {
 }
 
@@ -42,7 +45,7 @@ void  simulator::generate_random_connections() {
 	item_descriptor v_end = *vertices(g).second;
 	size_t Gsz = num_vertices(g);
 	for (unsigned int conn_per_sensor = 1; conn_per_sensor <= edges_per_sensor_; ++conn_per_sensor) {
-		for ( item_descriptor v = *vertices(g).first; v != v_end; ++v ) { // 
+		for ( item_descriptor v = *vertices(g).first; v != v_end; ++v ) { //
 			//std::cout << "generating for vertex: " << v << "  candidate: ";
 			if(degree(v, g) >= conn_per_sensor) {
 				//std::cout << std::endl;

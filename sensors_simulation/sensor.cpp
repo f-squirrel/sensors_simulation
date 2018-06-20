@@ -14,7 +14,6 @@ void sensor::add_connection(sensor_p_t sensor) {
 void sensor::start(unsigned& message_undelivered,  std::atomic<bool>& go, const message& message_to_send, std::chrono::steady_clock::time_point& tend) {
 
 	message_list_.push(message_to_send);
-	
 	// we want to start sending messages simultaneously
 	while (!go) {
 		std::this_thread::yield();

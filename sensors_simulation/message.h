@@ -2,6 +2,8 @@
 #define MESSAGE_H
 
 #include <string>
+
+
 typedef unsigned int id_t;
 
 class message {
@@ -13,7 +15,6 @@ public:
 	message(id_t id, id_t reciever_id)
 		: id_(id), reciever_id_(reciever_id), transmissions_cnt_(0) {
 	}
-
 	id_t id() const					{ return id_; }
 	id_t reciever_id() const		{ return reciever_id_; }
 	size_t transmassions() const	{ return transmissions_cnt_; }

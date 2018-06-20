@@ -3,10 +3,11 @@
 
 #include "message.h"
 #include "waitfree_queue.h"
-#include <vector>
 #include <chrono>
-#include <set>
 #include <list>
+#include <set>
+#include <vector>
+
 
 class sensor;
 typedef sensor* sensor_p_t;

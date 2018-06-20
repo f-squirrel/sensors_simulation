@@ -1,16 +1,17 @@
-
 #include "utils.h"
-#include <chrono>
-#include <random>
-#include <functional>
-#include <iostream>
 
 #include <boost/random.hpp>
+
+#include <chrono>
+#include <functional>
+#include <iostream>
+#include <random>
+
 
 namespace utils {
 
 std::size_t generate_random_number(unsigned min, unsigned max) {
-	
+
 	std::mt19937 typedef generator_t;
 	std::random_device generate_seed;
 	generator_t gen(generate_seed());
@@ -27,7 +28,7 @@ void press_any_key() {
 }
 
 bool check_input_data(unsigned int sens_num, unsigned int connections_num, unsigned int seconds_num) {
-	
+
 	if (sens_num == 0) {
 		std::cerr << "error: sensor number is 0\n";
 		return false;
