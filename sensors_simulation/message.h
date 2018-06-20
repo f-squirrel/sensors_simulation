@@ -14,8 +14,8 @@ public:
 		: id_(id), reciever_id_(reciever_id), transmissions_cnt_(0) {
 	}
 
-	const id_t id() const			{ return id_; }
-	const id_t reciever_id() const	{ return reciever_id_; }
+	id_t id() const					{ return id_; }
+	id_t reciever_id() const		{ return reciever_id_; }
 	size_t transmassions() const	{ return transmissions_cnt_; }
 	void add_transmission()			{ ++transmissions_cnt_; }
 

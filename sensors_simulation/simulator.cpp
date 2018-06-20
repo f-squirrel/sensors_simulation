@@ -9,7 +9,7 @@
 using namespace boost;
 
 simulator::simulator(unsigned int sensor_num, unsigned int edges_per_sensor, unsigned int seconds ) : 
-		sensor_num_(sensor_num), edges_per_sensor_(edges_per_sensor), seconds_(seconds), g(sensor_num) {
+		g(sensor_num), sensor_num_(sensor_num), edges_per_sensor_(edges_per_sensor), seconds_(seconds) {
 }
 
 simulator::~simulator() {

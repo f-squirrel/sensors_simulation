@@ -1,5 +1,6 @@
 #include "simulator.h"
 #include "utils.h"
+#include <iostream>
 
 
 int main() {

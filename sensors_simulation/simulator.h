@@ -20,7 +20,7 @@ private:
 		sensor* sensor_;
 	public:
 		item() : sensor_(new sensor) {}
-		sensor * const get_sensor() { return sensor_; }
+		sensor* get_sensor() { return sensor_; }
 	};
 
 	typedef boost::adjacency_list <	boost::setS, boost::vecS,

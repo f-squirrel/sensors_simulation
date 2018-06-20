@@ -1,10 +1,7 @@
 #ifndef UTILS_H
 #define UTILS_H
 
-
-#ifdef __APPLE__
-#include <stdlib.h>
-#endif
+#include <cstdlib>
 
 namespace utils {
 
